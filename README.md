@@ -5,10 +5,11 @@ Traduz automaticamente no backend, valores no padrão BR pra o DB e vice-versa.
 
 **Requisitos:**
 Laravel 5.6
+Laravel 8
 
 **Instalação via composer:**
 
-    composer install tnatanael\brformatter
+    composer require tnatanael/brformatter
 
 
 **Utilização**

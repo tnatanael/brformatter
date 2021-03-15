@@ -6,12 +6,12 @@
     "authors": [
         {
             "name": "Thiago Natanael",
-            "email": "thiago_natanael@msn.com"
+            "email": "thiagonatanael@gmail.com"
         }
     ],
     "minimum-stability": "alpha",
     "autoload": {
-        "psr-0" : {
+        "psr-4" : {
             "TNatanael\\BrFormatter" : "src"
         }
     }
