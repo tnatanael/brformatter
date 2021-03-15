@@ -12,7 +12,7 @@
     "minimum-stability": "alpha",
     "autoload": {
         "psr-4" : {
-            "TNatanael\\BrFormatter" : "src"
+            "TNatanael\\BrFormatter" : "src/"
         }
     }
 }
