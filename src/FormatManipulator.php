@@ -130,7 +130,8 @@ class FormatManipulator
      */
     public static function br_to_datetime($string)
     {
-        if (!is_string($string)) return null;
+        if (is_null($string)) return null;
+        if ($string == '00/00/0000 00:00') return null;
 
         //Se foi informado um objeto do tipo Carbon sómente retornamos para o DB
         if (is_object($string) && $string instanceof Carbon) {
