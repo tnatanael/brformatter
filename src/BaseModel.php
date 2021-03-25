@@ -4,8 +4,6 @@ namespace TNatanael\BrFormatter;
 
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
-use Illuminate\Support\Facades\Log;
-
 use Carbon\Carbon;
 
 class BaseModel extends EloquentModel
@@ -40,7 +38,9 @@ class BaseModel extends EloquentModel
     {
         if (is_null($string_date)) return null;
 
-        Log::info($string_date);
+        if (substr_count($string_date, 'T') == 1) {
+            return Carbon::parse($string_date)->format('d/m/Y H:i');
+        }
 
         return Carbon::createFromFormat('Y-m-d H:i:s', $string_date)->format('d/m/Y H:i');
     }
