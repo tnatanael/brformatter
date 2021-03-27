@@ -44,8 +44,6 @@ class BaseModel extends Model
             return Carbon::parse($string_date)->format('d/m/Y H:i');
         }
 
-        Log::info($string_date);
-
         return Carbon::createFromFormat('Y-m-d H:i:s', $string_date)->format('d/m/Y H:i');
     }
 }
