@@ -112,7 +112,7 @@ class FormatManipulator
         //TODO: Analizar esta implementação parece desnecessária, se o DB sempre retorna um mesmo tipo de dados, não precisamos checar ou converter...
         if (is_object($timestamp)) {
             //Tipo Carbon Date
-            return $timestamp->toDateTimeString()->format('d/m/Y H:i');
+            return $timestamp->format('d/m/Y H:i');
         }
         if (is_string($timestamp)) {
             //String de Data
