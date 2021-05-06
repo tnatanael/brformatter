@@ -168,7 +168,7 @@ class FormatManipulator
      */
     public static function br_to_money($string)
     {
-        if (str_contains($string, ',')) {
+        if (!is_null($string) && str_contains($string, ',')) {
             //Remove o prefixo de REAL caso exista
             $string = str_replace('R$', '', $string);
             //Remove os pontos de milhar, caso existam
@@ -177,12 +177,9 @@ class FormatManipulator
             $string = str_replace(',', '.', $string);
             //Retorna
             return $string;
-        } elseif (is_numeric($string)) {
-            return $string;
-        } else {
-            //Retorna 0 caso inválido!
-            return 0;
         }
+        
+        return $string;
     }
 
     /**
