@@ -85,7 +85,7 @@ class FormatManipulator
      */
     public static function date_to_br($date)
     {
-        return (is_string($date)) ? Carbon::parse($date)->format('d/m/Y') : '00/00/0000';
+        return (is_string($date)) ? Carbon::parse($date)->format('d/m/Y') : null;
     }
 
     /**
@@ -137,6 +137,7 @@ class FormatManipulator
         if (is_object($string) && $string instanceof Carbon) {
             return $string;
         }
+        
         //Inserção de segundos é opcional
         if (substr_count($string, ':') == 1) {
             return (is_string($string)) ? Carbon::createFromFormat('d/m/Y H:i', $string) : null;
